@@ -57,7 +57,10 @@ export default function Home() {
         <div className="w-full py-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black">
             {/* Project 1 */}
-            <div className="bg-white border-b border-r border-black">
+            <Link
+              href="/projects/snowstrippers-vinyl"
+              className="bg-white border-b border-r border-black"
+            >
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
                   Snowstrippers Vinyl
@@ -75,10 +78,13 @@ export default function Home() {
                   height={819}
                 />
               </div>
-            </div>
+            </Link>
 
             {/* Project 2 */}
-            <div className="bg-white border-b border-black">
+            <Link
+              href="/projects/dreigroschenoper"
+              className="bg-white border-b border-black"
+            >
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
                   Dreigroschenoper
@@ -96,10 +102,13 @@ export default function Home() {
                   height={819}
                 />
               </div>
-            </div>
+            </Link>
 
             {/* Project 3 */}
-            <div className="bg-white border-b border-r border-black">
+            <Link
+              href="/projects/fff-carson-poster"
+              className="bg-white border-b border-r border-black"
+            >
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
                   FFF Carson Poster
@@ -117,10 +126,10 @@ export default function Home() {
                   height={1024}
                 />
               </div>
-            </div>
+            </Link>
 
             {/* Project 4 */}
-            <div className="bg-white">
+            <Link href="/projects/resonanz-minimalism" className="bg-white">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
                   Resonanz Minimalism
@@ -138,10 +147,13 @@ export default function Home() {
                   height={819}
                 />
               </div>
-            </div>
+            </Link>
 
             {/* Project 5 */}
-            <div className="bg-white border-b border-r border-black">
+            <Link
+              href="/gewaltfrei"
+              className="bg-white border-b border-r border-black"
+            >
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
                   Gewaltfreie Kommunikation
@@ -159,10 +171,13 @@ export default function Home() {
                   height={1024}
                 />
               </div>
-            </div>
+            </Link>
 
             {/* Project 6 */}
-            <div className="bg-white border-b border-black">
+            <Link
+              href="/projects/politische-plakate"
+              className="bg-white border-b border-black"
+            >
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
                   Politische Plakate
@@ -180,7 +195,7 @@ export default function Home() {
                   height={1024}
                 />
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </main>
