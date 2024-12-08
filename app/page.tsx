@@ -20,16 +20,16 @@ export default function Home() {
       <header className="pt-2">
         <div className="container flex h-14 items-center gap-12">
           <Link
-            href="#"
+            href="/"
             className="pl-4 text-3xl font-light hover:underline underline"
           >
             Thuy Nguyen
           </Link>
           <nav className="hidden gap-6 lg:flex">
-            <Link href="#" className="text-2xl font-light hover:underline">
+            <Link href="/about" className="text-2xl font-light hover:underline">
               Hire me
             </Link>
-            <Link href="#" className="text-2xl font-light hover:underline">
+            <Link href="/about" className="text-2xl font-light hover:underline">
               About me
             </Link>
           </nav>
@@ -60,10 +60,10 @@ export default function Home() {
             <div className="bg-white border-b border-r border-black">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
-                  Designbysalome x Casetify
+                  Snowstrippers Vinyl
                 </h2>
                 <p className="text-sm font-light text-muted-foreground">
-                  [CASE DESIGN]
+                  [VINYL COVER DESIGN]
                 </p>
               </div>
               <div className="flex justify-center">
@@ -81,10 +81,10 @@ export default function Home() {
             <div className="bg-white border-b border-black">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
-                  02 Books in 01 Slipcase
+                  Dreigroschenoper
                 </h2>
                 <p className="text-sm font-light text-muted-foreground">
-                  [EDITORIAL DESIGN]
+                  [POSTER DESIGN]
                 </p>
               </div>
               <div className="flex justify-center">
@@ -144,10 +144,10 @@ export default function Home() {
             <div className="bg-white border-b border-r border-black">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
-                  Another Project
+                  Gewaltfreie Kommunikation
                 </h2>
                 <p className="text-sm font-light text-muted-foreground">
-                  [PROJECT TYPE]
+                  [POSTER DESIGN]
                 </p>
               </div>
               <div className="flex justify-center h-[calc(100%-3.5rem)]">
@@ -165,10 +165,10 @@ export default function Home() {
             <div className="bg-white border-b border-black">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
-                  Another Project
+                  Politische Plakate
                 </h2>
                 <p className="text-sm font-light text-muted-foreground">
-                  [PROJECT TYPE]
+                  [POSTER DESIGN]
                 </p>
               </div>
               <div className="flex justify-center h-[calc(100%-3.5rem)]">
