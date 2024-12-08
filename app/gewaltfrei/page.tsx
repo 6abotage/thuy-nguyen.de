@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ImageSlideshow } from "@/components/ui/image-slideshow";
 
 import Beduerfnisbegriffe from "./output_images/Beduerfnisbegriffe_A0.webp";

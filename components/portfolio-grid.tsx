@@ -1,4 +1,5 @@
-'use client'
+"use client";
+import Image from "next/image";
 
 export function PortfolioGrid() {
   return (
@@ -7,11 +8,15 @@ export function PortfolioGrid() {
         {/* Project 1 */}
         <div className="bg-white">
           <div className="p-4 space-y-2 border-b border-black">
-            <h2 className="text-sm font-light uppercase">Designbysalome x Casetify</h2>
-            <p className="text-sm font-light text-muted-foreground">[CASE DESIGN]</p>
+            <h2 className="text-sm font-light uppercase">
+              Designbysalome x Casetify
+            </h2>
+            <p className="text-sm font-light text-muted-foreground">
+              [CASE DESIGN]
+            </p>
           </div>
           <div className="p-4">
-            <img
+            <Image
               src="/placeholder.svg?height=600&width=400"
               alt="Phone case design with blue cloudy pattern"
               className="w-full object-cover"
@@ -24,11 +29,15 @@ export function PortfolioGrid() {
         {/* Project 2 */}
         <div className="bg-white">
           <div className="p-4 space-y-2 border-b border-black">
-            <h2 className="text-sm font-light uppercase">02 Books in 01 Slipcase</h2>
-            <p className="text-sm font-light text-muted-foreground">[EDITORIAL DESIGN]</p>
+            <h2 className="text-sm font-light uppercase">
+              02 Books in 01 Slipcase
+            </h2>
+            <p className="text-sm font-light text-muted-foreground">
+              [EDITORIAL DESIGN]
+            </p>
           </div>
           <div className="p-4">
-            <img
+            <Image
               src="/placeholder.svg?height=600&width=400"
               alt="Editorial design showing book spines"
               className="w-full object-cover"
@@ -42,10 +51,12 @@ export function PortfolioGrid() {
         <div className="bg-white">
           <div className="p-4 space-y-2 border-b border-black">
             <h2 className="text-sm font-light uppercase">Project Title</h2>
-            <p className="text-sm font-light text-muted-foreground">[PROJECT TYPE]</p>
+            <p className="text-sm font-light text-muted-foreground">
+              [PROJECT TYPE]
+            </p>
           </div>
           <div className="p-4">
-            <img
+            <Image
               src="/placeholder.svg?height=600&width=400"
               alt="Project image"
               className="w-full object-cover"
@@ -59,10 +70,12 @@ export function PortfolioGrid() {
         <div className="bg-white">
           <div className="p-4 space-y-2 border-b border-black">
             <h2 className="text-sm font-light uppercase">Another Project</h2>
-            <p className="text-sm font-light text-muted-foreground">[PROJECT TYPE]</p>
+            <p className="text-sm font-light text-muted-foreground">
+              [PROJECT TYPE]
+            </p>
           </div>
           <div className="p-4">
-            <img
+            <Image
               src="/placeholder.svg?height=600&width=400"
               alt="Another project image"
               className="w-full object-cover"
@@ -73,5 +86,5 @@ export function PortfolioGrid() {
         </div>
       </div>
     </main>
-  )
+  );
 }
