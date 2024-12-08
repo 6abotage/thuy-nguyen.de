@@ -7,6 +7,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
+import mockup_dreigroschenoper_wand from "./assets/mockup_dreigroschenoper_wand.png";
+import mockup_FFF_carson_poster_steinboden from "./assets/mockup_FFF_carson_poster_steinboden.png";
+import mockup_flyer_resonanz_minimalism from "./assets/mockup_flyer_resonanz_minimalism.png";
+import mockup_gewaltfreiekommunikation_stein from "./assets/mockup_gewaltfreiekommunikation_stein.png";
+import mockup_politischeplakate_orangeconcrete from "./assets/mockup_politischeplakate_orangeconcrete.png";
+import Vinyl_Mockup_Snowstrippers_coverbild from "./assets/Vinyl_Mockup_Snowstrippers_coverbild.png";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -61,11 +68,11 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="https://picsum.photos/819/1024?random=1"
+                  src={Vinyl_Mockup_Snowstrippers_coverbild}
                   alt="Phone case design with blue cloudy pattern"
                   className="max-w-full h-auto"
-                  width={819}
-                  height={1024}
+                  width={1024}
+                  height={819}
                 />
               </div>
             </div>
@@ -82,11 +89,11 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="https://picsum.photos/819/1024?random=2"
+                  src={mockup_dreigroschenoper_wand}
                   alt="Editorial design showing book spines"
                   className="max-w-full h-auto"
-                  width={819}
-                  height={1024}
+                  width={1024}
+                  height={819}
                 />
               </div>
             </div>
@@ -95,17 +102,17 @@ export default function Home() {
             <div className="bg-white border-b border-r border-black">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
-                  Creative Branding
+                  FFF Carson Poster
                 </h2>
                 <p className="text-sm font-light text-muted-foreground">
-                  [BRANDING PROJECT]
+                  [POSTER DESIGN]
                 </p>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center h-[calc(100%-3.5rem)]">
                 <Image
-                  src="https://picsum.photos/819/1024?random=3"
+                  src={mockup_FFF_carson_poster_steinboden}
                   alt="Project image"
-                  className="max-w-full h-auto"
+                  className="w-full h-full object-cover"
                   width={819}
                   height={1024}
                 />
@@ -116,18 +123,60 @@ export default function Home() {
             <div className="bg-white">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
+                  Resonanz Minimalism
+                </h2>
+                <p className="text-sm font-light text-muted-foreground">
+                  [FLYER DESIGN]
+                </p>
+              </div>
+              <div className="flex justify-center h-[calc(100%-3.5rem)]">
+                <Image
+                  src={mockup_flyer_resonanz_minimalism}
+                  alt="Another project image"
+                  className="w-full h-full object-cover"
+                  width={1024}
+                  height={819}
+                />
+              </div>
+            </div>
+
+            {/* Project 5 */}
+            <div className="bg-white border-b border-r border-black">
+              <div className="p-4 space-y-2 border-b border-black">
+                <h2 className="text-sm font-light uppercase">
                   Another Project
                 </h2>
                 <p className="text-sm font-light text-muted-foreground">
                   [PROJECT TYPE]
                 </p>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center h-[calc(100%-3.5rem)]">
                 <Image
-                  src="https://picsum.photos/819/1024?random=4"
+                  src={mockup_gewaltfreiekommunikation_stein}
                   alt="Another project image"
-                  className="max-w-full h-auto"
+                  className="w-full h-full object-cover"
                   width={819}
+                  height={1024}
+                />
+              </div>
+            </div>
+
+            {/* Project 6 */}
+            <div className="bg-white border-b border-black">
+              <div className="p-4 space-y-2 border-b border-black">
+                <h2 className="text-sm font-light uppercase">
+                  Another Project
+                </h2>
+                <p className="text-sm font-light text-muted-foreground">
+                  [PROJECT TYPE]
+                </p>
+              </div>
+              <div className="flex justify-center h-[calc(100%-3.5rem)]">
+                <Image
+                  src={mockup_politischeplakate_orangeconcrete}
+                  alt="Another project image"
+                  className="w-full h-full object-cover"
+                  width={768}
                   height={1024}
                 />
               </div>
