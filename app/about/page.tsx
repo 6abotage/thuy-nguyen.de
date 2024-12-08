@@ -77,7 +77,7 @@ export default function About() {
               <p className="text-lg font-light leading-relaxed">
                 My work is an ongoing experiment – a playful approach across the
                 fields of photography, graphic design, and art direction,
-                exploring the limits of what's possible. I create in spaces
+                exploring the limits of what&apos;s possible. I create in spaces
                 where order collides with chaos, where nothing is as it seems.
               </p>
               <p className="text-lg font-light leading-relaxed">
@@ -87,9 +87,9 @@ export default function About() {
                 into new shapes to make ideas hit with greater impact.
               </p>
               <p className="text-lg font-light leading-relaxed">
-                I'm drawn to the edges of society, to what remains unspoken or
-                unseen. It's about questioning the conventional and celebrating
-                the unconventional.
+                I&apos;m drawn to the edges of society, to what remains unspoken
+                or unseen. It&apos;s about questioning the conventional and
+                celebrating the unconventional.
               </p>
             </section>
           </div>
