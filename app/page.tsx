@@ -1,18 +1,63 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { Menu } from 'lucide-react';
 import Link from "next/link";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-import mockup_dreigroschenoper_wand from "./assets/mockup_dreigroschenoper_wand.png";
-import mockup_FFF_carson_poster_steinboden from "./assets/mockup_FFF_carson_poster_steinboden.png";
-import mockup_flyer_resonanz_minimalism from "./assets/mockup_flyer_resonanz_minimalism.png";
-import mockup_gewaltfreiekommunikation_stein from "./assets/mockup_gewaltfreiekommunikation_stein.png";
-import mockup_politischeplakate_orangeconcrete from "./assets/mockup_politischeplakate_orangeconcrete.png";
-import Vinyl_Mockup_Snowstrippers_coverbild from "./assets/Vinyl_Mockup_Snowstrippers_coverbild.png";
+import Ausstellungsplakat_Resonanz from "@/app/assets/Ausstellungsplakat_Resonanz.png";
+import Dreigroschenoper_Cover from "@/app/assets/Dreigroschenoper_Cover.png";
+import EmotionaleErsteHilfe_GewaltfreieKommunikation from "@/app/assets/EmotionaleErsteHilfe_GewaltfreieKommunikation.png";
+import FFF_DavidCarson from "@/app/assets/FFF_DavidCarson.png";
+import PolitischesPlakat from "@/app/assets/PolitischesPlakat.png";
+import PolitischesPlakat_Victimblaming from "@/app/assets/PolitischesPlakat_Victimblaming.png";
+
+const projects = [
+  {
+    href: "/resonanz",
+    title: "Ausstellungsplakat Resonanz",
+    subtitle: "[POSTER DESIGN]",
+    image: Ausstellungsplakat_Resonanz,
+    alt: "Ausstellungsplakat Resonanz poster design",
+  },
+  {
+    href: "/dreigroschenoper",
+    title: "Dreigroschenoper",
+    subtitle: "[COVER DESIGN]",
+    image: Dreigroschenoper_Cover,
+    alt: "Dreigroschenoper cover design",
+  },
+  {
+    href: "/gewaltfrei",
+    title: "Gewaltfreie Kommunikation",
+    subtitle: "[POSTER DESIGN]",
+    image: EmotionaleErsteHilfe_GewaltfreieKommunikation,
+    alt: "Emotionale Erste Hilfe - Gewaltfreie Kommunikation poster design",
+  },
+  {
+    href: "/fff",
+    title: "FFF David Carson",
+    subtitle: "[POSTER DESIGN]",
+    image: FFF_DavidCarson,
+    alt: "FFF David Carson poster design",
+  },
+  {
+    href: "/vinyl",
+    title: "Politisches Plakat",
+    subtitle: "[POSTER DESIGN]",
+    image: PolitischesPlakat,
+    alt: "Politisches Plakat design",
+  },
+  {
+    href: "/zeilen",
+    title: "VICTIMBLAMING - ZWISCHEN DEN ZEILEN",
+    subtitle: "[POSTER DESIGN]",
+    image: PolitischesPlakat_Victimblaming,
+    alt: "Politisches Plakat - Victimblaming design",
+  },
+];
 
 export default function Home() {
   return (
@@ -53,152 +98,40 @@ export default function Home() {
           </Sheet>
         </div>
       </header>
-      <main className="w-full">
+      <main className="flex-grow">
         <div className="w-full py-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black">
-            {/* Project 1 */}
-            <Link
-              href="/snowstrippers-vinyl"
-              className="bg-white border-b border-r border-black"
-            >
-              <div className="p-4 space-y-2 border-b border-black">
-                <h2 className="text-sm font-light uppercase">
-                  Snowstrippers Vinyl
-                </h2>
-                <p className="text-sm font-light text-muted-foreground">
-                  [VINYL COVER DESIGN]
-                </p>
-              </div>
-              <div className="flex justify-center">
-                <Image
-                  src={Vinyl_Mockup_Snowstrippers_coverbild}
-                  alt="Phone case design with blue cloudy pattern"
-                  className="max-w-full h-auto"
-                  width={1024}
-                  height={819}
-                />
-              </div>
-            </Link>
-
-            {/* Project 2 */}
-            <Link
-              href="/dreigroschenoper"
-              className="bg-white border-b border-black"
-            >
-              <div className="p-4 space-y-2 border-b border-black">
-                <h2 className="text-sm font-light uppercase">
-                  Dreigroschenoper
-                </h2>
-                <p className="text-sm font-light text-muted-foreground">
-                  [POSTER DESIGN]
-                </p>
-              </div>
-              <div className="flex justify-center">
-                <Image
-                  src={mockup_dreigroschenoper_wand}
-                  alt="Editorial design showing book spines"
-                  className="max-w-full h-auto"
-                  width={1024}
-                  height={819}
-                />
-              </div>
-            </Link>
-
-            {/* Project 3 */}
-            <Link
-              href="/fff"
-              className="bg-white border-b border-r border-black"
-            >
-              <div className="p-4 space-y-2 border-b border-black">
-                <h2 className="text-sm font-light uppercase">
-                  FFF Carson Poster
-                </h2>
-                <p className="text-sm font-light text-muted-foreground">
-                  [POSTER DESIGN]
-                </p>
-              </div>
-              <div className="flex justify-center h-[calc(100%-3.5rem)]">
-                <Image
-                  src={mockup_FFF_carson_poster_steinboden}
-                  alt="Project image"
-                  className="w-full h-full object-cover"
-                  width={819}
-                  height={1024}
-                />
-              </div>
-            </Link>
-
-            {/* Project 4 */}
-            <Link href="/resonanz" className="bg-white">
-              <div className="p-4 space-y-2 border-b border-black">
-                <h2 className="text-sm font-light uppercase">
-                  Resonanz Minimalism
-                </h2>
-                <p className="text-sm font-light text-muted-foreground">
-                  [FLYER DESIGN]
-                </p>
-              </div>
-              <div className="flex justify-center h-[calc(100%-3.5rem)]">
-                <Image
-                  src={mockup_flyer_resonanz_minimalism}
-                  alt="Another project image"
-                  className="w-full h-full object-cover"
-                  width={1024}
-                  height={819}
-                />
-              </div>
-            </Link>
-
-            {/* Project 5 */}
-            <Link
-              href="/gewaltfrei"
-              className="bg-white border-b border-r border-black"
-            >
-              <div className="p-4 space-y-2 border-b border-black">
-                <h2 className="text-sm font-light uppercase">
-                  Gewaltfreie Kommunikation
-                </h2>
-                <p className="text-sm font-light text-muted-foreground">
-                  [POSTER DESIGN]
-                </p>
-              </div>
-              <div className="flex justify-center h-[calc(100%-3.5rem)]">
-                <Image
-                  src={mockup_gewaltfreiekommunikation_stein}
-                  alt="Another project image"
-                  className="w-full h-full object-cover"
-                  width={819}
-                  height={1024}
-                />
-              </div>
-            </Link>
-
-            {/* Project 6 */}
-            <Link
-              href="/zeilen"
-              className="bg-white border-b border-black"
-            >
-              <div className="p-4 space-y-2 border-b border-black">
-                <h2 className="text-sm font-light uppercase">
-                  ZWISCHEN DEN ZEILEN - POLITISCHE PLAKATE
-                </h2>
-                <p className="text-sm font-light text-muted-foreground">
-                  [POSTER DESIGN]
-                </p>
-              </div>
-              <div className="flex justify-center h-[calc(100%-3.5rem)]">
-                <Image
-                  src={mockup_politischeplakate_orangeconcrete}
-                  alt="Another project image"
-                  className="w-full h-full object-cover"
-                  width={768}
-                  height={1024}
-                />
-              </div>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black w-full">
+            {projects.map((project, index) => (
+              <Link
+                key={project.href}
+                href={project.href}
+                className={`bg-white border-b border-black ${index % 2 === 0 ? "md:border-r" : ""
+                  }`}
+              >
+                <div className="p-4 space-y-2 border-b border-black">
+                  <h2 className="text-sm font-light uppercase">
+                    {project.title}
+                  </h2>
+                  <p className="text-sm font-light text-muted-foreground">
+                    {project.subtitle}
+                  </p>
+                </div>
+                <div className="relative" style={{ aspectRatio: "9 / 13.5", height: "auto", maxHeight: "70vh", margin: "0 auto" }}>
+                  <Image
+                    src={project.image}
+                    alt={project.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    priority={index < 2}
+                  />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </main>
     </div>
   );
 }
+
