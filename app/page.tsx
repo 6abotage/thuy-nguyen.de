@@ -58,7 +58,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black">
             {/* Project 1 */}
             <Link
-              href="/projects/snowstrippers-vinyl"
+              href="/snowstrippers-vinyl"
               className="bg-white border-b border-r border-black"
             >
               <div className="p-4 space-y-2 border-b border-black">
@@ -82,7 +82,7 @@ export default function Home() {
 
             {/* Project 2 */}
             <Link
-              href="/projects/dreigroschenoper"
+              href="/dreigroschenoper"
               className="bg-white border-b border-black"
             >
               <div className="p-4 space-y-2 border-b border-black">
@@ -106,7 +106,7 @@ export default function Home() {
 
             {/* Project 3 */}
             <Link
-              href="/projects/fff-carson-poster"
+              href="/fff"
               className="bg-white border-b border-r border-black"
             >
               <div className="p-4 space-y-2 border-b border-black">
@@ -129,7 +129,7 @@ export default function Home() {
             </Link>
 
             {/* Project 4 */}
-            <Link href="/projects/resonanz-minimalism" className="bg-white">
+            <Link href="/resonanz" className="bg-white">
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
                   Resonanz Minimalism
@@ -175,12 +175,12 @@ export default function Home() {
 
             {/* Project 6 */}
             <Link
-              href="/projects/politische-plakate"
+              href="/zeilen"
               className="bg-white border-b border-black"
             >
               <div className="p-4 space-y-2 border-b border-black">
                 <h2 className="text-sm font-light uppercase">
-                  Politische Plakate
+                  ZWISCHEN DEN ZEILEN - POLITISCHE PLAKATE
                 </h2>
                 <p className="text-sm font-light text-muted-foreground">
                   [POSTER DESIGN]
