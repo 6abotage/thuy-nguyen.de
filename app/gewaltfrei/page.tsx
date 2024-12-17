@@ -2,14 +2,16 @@
 
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { ImageSlideshow } from "@/components/ui/image-slideshow";
 
 import Beduerfnisbegriffe from "./output_images/Beduerfnisbegriffe_A0.webp";
 import Eaafskript from "./output_images/eaafskript_A0.webp";
 import EmotionaleIntelligenz from "./output_images/emotionale_intelligenz_a0.webp";
 import GewaltfreieKommunikationImage from "./output_images/gewaltfreie_kommunikation_A0.webp";
+import EmblaCarousel from "@/components/ui/carousel/EmblaCarousel";
+import { EmblaOptionsType } from "embla-carousel";
 
-const projectImages = [
+const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+const SLIDES = [
   Beduerfnisbegriffe,
   Eaafskript,
   EmotionaleIntelligenz,
@@ -29,7 +31,7 @@ export default function GewaltfreieKommunikation() {
       <h1 className="text-3xl font-light mb-4">Gewaltfreie Kommunikation</h1>
       <p className="text-lg font-light mb-6">Emotionale Erste Hilfe</p>
       <div className="mb-8">
-        <ImageSlideshow images={projectImages} />
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       </div>
       <p className="text-lg font-light mb-6">
         Die informative Plakatreihe „Emotionale Erste Hilfe&quot; thematisiert
