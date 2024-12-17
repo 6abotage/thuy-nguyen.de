@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu } from 'lucide-react';
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -72,9 +72,6 @@ export default function Home() {
           </Link>
           <nav className="hidden gap-6 lg:flex">
             <Link href="/about" className="text-2xl font-light hover:underline">
-              Hire me
-            </Link>
-            <Link href="/about" className="text-2xl font-light hover:underline">
               About me
             </Link>
           </nav>
@@ -105,8 +102,9 @@ export default function Home() {
               <Link
                 key={project.href}
                 href={project.href}
-                className={`bg-white border-b border-black ${index % 2 === 0 ? "md:border-r" : ""
-                  }`}
+                className={`bg-white border-b border-black ${
+                  index % 2 === 0 ? "md:border-r" : ""
+                }`}
               >
                 <div className="p-4 space-y-2 border-b border-black">
                   <h2 className="text-sm font-light uppercase">
@@ -116,7 +114,15 @@ export default function Home() {
                     {project.subtitle}
                   </p>
                 </div>
-                <div className="relative" style={{ aspectRatio: "9 / 13.5", height: "auto", maxHeight: "70vh", margin: "0 auto" }}>
+                <div
+                  className="relative"
+                  style={{
+                    aspectRatio: "9 / 13.5",
+                    height: "auto",
+                    maxHeight: "70vh",
+                    margin: "0 auto",
+                  }}
+                >
                   <Image
                     src={project.image}
                     alt={project.alt}
@@ -134,4 +140,3 @@ export default function Home() {
     </div>
   );
 }
-
