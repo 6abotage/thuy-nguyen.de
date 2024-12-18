@@ -21,9 +21,9 @@ export const LazyLoadImage: React.FC<PropType> = (props) => {
   return (
     <div className="embla__slide">
       <div
-        className={"embla__lazy-load".concat(
+        className={`embla__lazy-load${
           hasLoaded ? " embla__lazy-load--has-loaded" : ""
-        )}
+        }`}
       >
         {!hasLoaded && <span className="embla__lazy-load__spinner" />}
         <Image
@@ -31,8 +31,8 @@ export const LazyLoadImage: React.FC<PropType> = (props) => {
           onLoad={setLoaded}
           src={inView ? imgSrc : PLACEHOLDER_SRC}
           alt="Your alt text"
-          data-src={imgSrc}
-          fill
+          width={imgSrc.width}
+          height={imgSrc.height}
         />
       </div>
     </div>

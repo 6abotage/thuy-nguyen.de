@@ -11,8 +11,8 @@ import Ausstellungsplakat_Resonanz from "@/app/assets/Ausstellungsplakat_Resonan
 import Dreigroschenoper_Cover from "@/app/assets/Dreigroschenoper_Cover.png";
 import EmotionaleErsteHilfe_GewaltfreieKommunikation from "@/app/assets/EmotionaleErsteHilfe_GewaltfreieKommunikation.png";
 import FFF_DavidCarson from "@/app/assets/FFF_DavidCarson.png";
-import PolitischesPlakat from "@/app/assets/PolitischesPlakat.png";
-import PolitischesPlakat_Victimblaming from "@/app/assets/PolitischesPlakat_Victimblaming.png";
+import VinylMockup from "@/app/assets/Vinyl_Mockup_Snowstrippers_coverbild.png";
+import PolitischesPlakat_Victimblaming from "@/app/assets/3poster_mockup_cover.png";
 
 const projects = [
   {
@@ -45,9 +45,9 @@ const projects = [
   },
   {
     href: "/vinyl",
-    title: "Politisches Plakat",
-    subtitle: "[POSTER DESIGN]",
-    image: PolitischesPlakat,
+    title: "Snowstrippers Coverbild",
+    subtitle: "[VINYL MOCKUP]",
+    image: VinylMockup,
     alt: "Politisches Plakat design",
   },
   {
