@@ -33,14 +33,14 @@ export default function Home() {
       </div>
       <p className="text-lg font-light mb-6">Eine Hommage an David Carson</p>
       <p className="text-lg font-light mb-6">
-        Im Rahmen des Projekts "Musik zum Quadrat" an der ecosign Akademie für
-        Gestaltung habe ich eine Vinyl-Platte inklusive Broschüre gestaltet.
-        Hierbei handelt es sich um eine Hommage an die amerikanische Band
-        Snowstrippers. Der unverwechselbare Stil der Band stand im Mittelpunkt
-        meines Konzepts, das ich in einem eigens organisierten Fotoshooting
-        visuell umgesetzt habe. Die Gestaltung der Broschüre sowie das
-        Plattendesign greifen die Ästhetik und die Atmosphäre ihrer Musik auf
-        und vereinen Fotografie und Editorial Design zu einem stimmigen
+        Im Rahmen des Projekts &quot;Musik zum Quadrat&quot; an der ecosign
+        Akademie für Gestaltung habe ich eine Vinyl-Platte inklusive Broschüre
+        gestaltet. Hierbei handelt es sich um eine Hommage an die amerikanische
+        Band Snowstrippers. Der unverwechselbare Stil der Band stand im
+        Mittelpunkt meines Konzepts, das ich in einem eigens organisierten
+        Fotoshooting visuell umgesetzt habe. Die Gestaltung der Broschüre sowie
+        das Plattendesign greifen die Ästhetik und die Atmosphäre ihrer Musik
+        auf und vereinen Fotografie und Editorial Design zu einem stimmigen
         Gesamtkunstwerk.
       </p>
     </div>
