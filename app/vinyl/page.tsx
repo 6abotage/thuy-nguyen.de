@@ -1,22 +1,30 @@
 "use client";
 
-import img1 from "./1.png";
-import img2 from "./2.png";
-import img3 from "./3.png";
-import img4 from "./4.png";
-import img5 from "./5.png";
-import img6 from "./6.png";
-
-import EmblaCarousel from "@/components/ui/carousel/EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
-
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 
-const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
-const SLIDES = [img1, img2, img3, img4, img5, img6];
+import VinylCover from "./assets/01_Vinyl_Cover.jpg";
+import VinylBack from "./assets/02_Vinyl_Back.jpg";
+import MockupBrochure1 from "./assets/03_Mockup_Brochure_21x21.png";
+import MockupBrochure2 from "./assets/04_Mockup_Brochure_21x21.png";
+import MockupBrochure3 from "./assets/05_Mockup_Brochure_21x21.png";
+import MockupBrochure4 from "./assets/06_Mockup_Brochure_21x21.png";
+import MockupBrochure5 from "./assets/07_Mockup_Brochure_21x21.png";
+import MockupBrochure6 from "./assets/08_Mockup_Brochure_21x21.png";
 
-export default function Home() {
+const IMAGES = [
+  { src: VinylCover, alt: "Vinyl Cover" },
+  { src: VinylBack, alt: "Vinyl Back Cover" },
+  { src: MockupBrochure1, alt: "Mockup Brochure Page 1" },
+  { src: MockupBrochure2, alt: "Mockup Brochure Page 2" },
+  { src: MockupBrochure3, alt: "Mockup Brochure Page 3" },
+  { src: MockupBrochure4, alt: "Mockup Brochure Page 4" },
+  { src: MockupBrochure5, alt: "Mockup Brochure Page 5" },
+  { src: MockupBrochure6, alt: "Mockup Brochure Page 6" },
+];
+
+export default function MusikZumQuadrat() {
   return (
     <div className="container mx-auto min-h-full px-4 py-8">
       <Link
@@ -27,22 +35,44 @@ export default function Home() {
         Back to projects
       </Link>
       <h1 className="text-3xl font-light mb-4">Musik zum Quadrat</h1>
-      <p className="text-lg font-light mb-6">Eine Hommage an Snowstrippers</p>
-      <div className="mb-8">
-        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-      </div>
-      <p className="text-lg font-light mb-6">Eine Hommage an David Carson</p>
-      <p className="text-lg font-light mb-6">
-        Im Rahmen des Projekts &quot;Musik zum Quadrat&quot; an der ecosign
-        Akademie für Gestaltung habe ich eine Vinyl-Platte inklusive Broschüre
-        gestaltet. Hierbei handelt es sich um eine Hommage an die amerikanische
-        Band Snowstrippers. Der unverwechselbare Stil der Band stand im
-        Mittelpunkt meines Konzepts, das ich in einem eigens organisierten
-        Fotoshooting visuell umgesetzt habe. Die Gestaltung der Broschüre sowie
-        das Plattendesign greifen die Ästhetik und die Atmosphäre ihrer Musik
-        auf und vereinen Fotografie und Editorial Design zu einem stimmigen
-        Gesamtkunstwerk.
+      <p className="text-lg font-light mb-8">(Hommage an Snow Strippers)</p>
+      <p className="text-lg font-light mb-10">
+        In diesem Projekt setzte ich mich mit dem Musikduo Snow Strippers
+        auseinander, das in seiner Musik Elemente aus EDM, Electropop, New Rave,
+        Witch House und Techno vereint. Ziel war die Entwicklung eines
+        konsistenten Gestaltungskonzepts für eine Schallplatte und ein
+        begleitendes Booklet für ihr Album Night Killaz Vol. 1. Die visuelle
+        Umsetzung wurde durch eigens angefertigte Fotografien ergänzt, um die
+        ästhetische und klangliche Identität des Duos authentisch zu
+        unterstreichen. Das Projekt entstand nicht in Zusammenarbeit mit den
+        Künstler:innen, sondern dient ausschließlich privaten
+        Gestaltungszwecken.
       </p>
+
+      {/* Images displayed vertically with spacing */}
+      <div className="grid grid-cols-1 gap-8">
+        {IMAGES.map((image, index) => (
+          <div key={index} className="relative">
+            <div
+              className="relative w-full mx-auto"
+              style={{
+                maxHeight: "80vh",
+                height: "auto",
+                aspectRatio: "1 / 1",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                layout="fill"
+                objectFit="contain"
+                className="absolute inset-0"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
