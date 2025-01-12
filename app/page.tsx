@@ -7,55 +7,71 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-import Ausstellungsplakat_Resonanz from "@/app/assets/Ausstellungsplakat_Resonanz.png";
-import Dreigroschenoper_Cover from "@/app/assets/Dreigroschenoper_Cover.png";
-import EmotionaleErsteHilfe_GewaltfreieKommunikation from "@/app/assets/EmotionaleErsteHilfe_GewaltfreieKommunikation.png";
-import FFF_DavidCarson from "@/app/assets/FFF_DavidCarson.png";
-import VinylMockup from "@/app/assets/Vinyl_Mockup_Snowstrippers_coverbild.png";
-import PolitischesPlakat_Victimblaming from "@/app/assets/3poster_mockup_cover.png";
+import CoverEmotionaleErsteHilfe from "@/app/assets/cover/01_Cover_Emotionale_Erste_Hilfe.jpg";
+import CoverDieDreigroschenoper from "@/app/assets/cover/02_Cover_Die_Dreigroschenoper.jpg";
+import CoverVinyl from "@/app/assets/cover/03_Cover_Vinyl.jpg";
+import CoverImSchattenDesStaunens from "@/app/assets/cover/04_Cover_Im_Schatten_Des_Staunens.jpg";
+import CoverDasDritteBild from "@/app/assets/cover/05_Cover_Das_Dritte_Bild.jpg";
+import CoverFridaysForFutureZine from "@/app/assets/cover/06_Cover_Firdays_For_Future_Zine.jpg";
+import CoverZwischenDenZeilen from "@/app/assets/cover/07_Cover_Zwischen_Den_Zeilen.jpg";
+import CoverBleachBerlin from "@/app/assets/cover/08_Cover_Bleach_Berlin.jpg";
 
 const projects = [
   {
-    href: "/resonanz",
-    title: "Ausstellungsplakat Resonanz",
+    href: "/emotionale-ersthilfe",
+    title: "Emotionale Erste Hilfe",
     subtitle: "[POSTER DESIGN]",
-    image: Ausstellungsplakat_Resonanz,
-    alt: "Ausstellungsplakat Resonanz poster design",
+    image: CoverEmotionaleErsteHilfe,
+    alt: "Emotionale Erste Hilfe Poster Design",
   },
   {
     href: "/dreigroschenoper",
-    title: "Dreigroschenoper",
-    subtitle: "[COVER DESIGN]",
-    image: Dreigroschenoper_Cover,
-    alt: "Dreigroschenoper cover design",
-  },
-  {
-    href: "/gewaltfrei",
-    title: "Gewaltfreie Kommunikation",
+    title: "Die Dreigroschenoper",
     subtitle: "[POSTER DESIGN]",
-    image: EmotionaleErsteHilfe_GewaltfreieKommunikation,
-    alt: "Emotionale Erste Hilfe - Gewaltfreie Kommunikation poster design",
-  },
-  {
-    href: "/fff",
-    title: "FFF David Carson",
-    subtitle: "[POSTER DESIGN]",
-    image: FFF_DavidCarson,
-    alt: "FFF David Carson poster design",
+    image: CoverDieDreigroschenoper,
+    alt: "Die Dreigroschenoper Poster Design",
   },
   {
     href: "/vinyl",
-    title: "Snowstrippers Coverbild",
-    subtitle: "[VINYL MOCKUP]",
-    image: VinylMockup,
-    alt: "Politisches Plakat design",
+    title: "Musik zum Quadrat",
+    subtitle: "[VINYL DESIGN + FOTOGRAFIE]",
+    image: CoverVinyl,
+    alt: "Musik zum Quadrat Vinyl Design",
   },
   {
-    href: "/zeilen",
-    title: "VICTIMBLAMING - ZWISCHEN DEN ZEILEN",
+    href: "/im-schatten-des-staunens",
+    title: "Im Schatten des Staunens",
+    subtitle: "[FOTOGRAFIE]",
+    image: CoverImSchattenDesStaunens,
+    alt: "Im Schatten des Staunens Fotografie",
+  },
+  {
+    href: "/das-dritte-bild",
+    title: "Das Dritte Bild",
+    subtitle: "[FOTOGRAFIE]",
+    image: CoverDasDritteBild,
+    alt: "Das Dritte Bild Fotografie",
+  },
+  {
+    href: "/fridays-for-future-zine",
+    title: "Fridays For Future Zine",
+    subtitle: "[ZINE DESIGN]",
+    image: CoverFridaysForFutureZine,
+    alt: "Fridays For Future Zine Design",
+  },
+  {
+    href: "/zwischen-den-zeilen",
+    title: "Zwischen den Zeilen",
     subtitle: "[POSTER DESIGN]",
-    image: PolitischesPlakat_Victimblaming,
-    alt: "Politisches Plakat - Victimblaming design",
+    image: CoverZwischenDenZeilen,
+    alt: "Zwischen den Zeilen Poster Design",
+  },
+  {
+    href: "/bleach-berlin",
+    title: "Visuelles Konzept für Bleach Berlin",
+    subtitle: "[GRAFIKDESIGN]",
+    image: CoverBleachBerlin,
+    alt: "Bleach Berlin Grafikdesign",
   },
 ];
 
