@@ -78,6 +78,7 @@ const projects = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* HEADER */}
       <header className="pt-2">
         <div className="container flex h-14 items-center gap-12">
           <Link
@@ -111,17 +112,27 @@ export default function Home() {
           </Sheet>
         </div>
       </header>
+
+      {/* MAIN CONTENT */}
       <main className="flex-grow">
+        {/* 
+          On mobile (default): 1 column,
+          on desktop (md+): 2 columns.
+          Each item is a square image plus some text.
+        */}
         <div className="w-full py-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black w-full">
             {projects.map((project, index) => (
               <Link
                 key={project.href}
                 href={project.href}
-                className={`bg-white border-b border-black ${
+                className={`border-black bg-white ${
+                  /* optional horizontal border on desktop for the left col */
                   index % 2 === 0 ? "md:border-r" : ""
-                }`}
+                } ${/* border on bottom for all but last row (optional) */ ""}
+                `}
               >
+                {/* Project Info */}
                 <div className="p-4 space-y-2 border-b border-black">
                   <h2 className="text-sm font-light uppercase">
                     {project.title}
@@ -130,19 +141,14 @@ export default function Home() {
                     {project.subtitle}
                   </p>
                 </div>
-                <div
-                  className="relative"
-                  style={{
-                    aspectRatio: "9 / 13.5",
-                    height: "auto",
-                    maxHeight: "70vh",
-                    margin: "0 auto",
-                  }}
-                >
+
+                {/* Square Image */}
+                <div className="relative aspect-square">
                   <Image
                     src={project.image}
                     alt={project.alt}
                     fill
+                    // Make sure images look good on mobile vs desktop:
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                     priority={index < 2}
