@@ -16,11 +16,6 @@ export default function About() {
           >
             Thuy Nguyen
           </Link>
-          <nav className="hidden gap-6 lg:flex">
-            <Link href="#" className="text-2xl font-light hover:underline">
-              Hire me
-            </Link>
-          </nav>
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" className="-mr-2">

@@ -26,50 +26,50 @@ const IMAGES = [
 
 export default function MusikZumQuadrat() {
   return (
-    <div className="container mx-auto min-h-full px-4 py-8">
-      <Link
-        href="/"
-        className="inline-flex items-center mb-6 text-sm font-light hover:underline"
-      >
-        <ArrowLeft className="mr-2 h-4 w-4" />
-        Back to projects
-      </Link>
-      <h1 className="text-3xl font-light mb-4">Musik zum Quadrat</h1>
-      <p className="text-lg font-light mb-8">(Hommage an Snow Strippers)</p>
-      <p className="text-lg font-light mb-10">
-        In diesem Projekt setzte ich mich mit dem Musikduo Snow Strippers
-        auseinander, das in seiner Musik Elemente aus EDM, Electropop, New Rave,
-        Witch House und Techno vereint. Ziel war die Entwicklung eines
-        konsistenten Gestaltungskonzepts für eine Schallplatte und ein
-        begleitendes Booklet für ihr Album Night Killaz Vol. 1. Die visuelle
-        Umsetzung wurde durch eigens angefertigte Fotografien ergänzt, um die
-        ästhetische und klangliche Identität des Duos authentisch zu
-        unterstreichen. Das Projekt entstand nicht in Zusammenarbeit mit den
-        Künstler:innen, sondern dient ausschließlich privaten
-        Gestaltungszwecken.
-      </p>
+    <div className="container mx-auto min-h-full py-8">
+      <div className="px-4">
+        <Link
+          href="/"
+          className="inline-flex items-center mb-6 text-sm font-light hover:underline"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to projects
+        </Link>
+        <h1 className="text-3xl font-light mb-4">Musik zum Quadrat</h1>
+        <p className="text-lg font-light mb-8">[Hommage an Snow Strippers]</p>
+        <p className="text-lg font-light mb-10">
+          In diesem Projekt setzte ich mich mit dem Musikduo Snow Strippers
+          auseinander, das in seiner Musik Elemente aus EDM, Electropop, New
+          Rave, Witch House und Techno vereint. Ziel war die Entwicklung eines
+          konsistenten Gestaltungskonzepts für eine Schallplatte und ein
+          begleitendes Booklet für ihr Album Night Killaz Vol. 1. Die visuelle
+          Umsetzung wurde durch eigens angefertigte Fotografien ergänzt, um die
+          ästhetische und klangliche Identität des Duos authentisch zu
+          unterstreichen. Das Projekt entstand nicht in Zusammenarbeit mit den
+          Künstler:innen, sondern dient ausschließlich privaten
+          Gestaltungszwecken.
+        </p>
+      </div>
 
-      {/* Images displayed vertically with spacing */}
       <div className="grid grid-cols-1 gap-8">
         {IMAGES.map((image, index) => (
-          <div key={index} className="relative">
-            <div
-              className="relative w-full mx-auto"
-              style={{
-                maxHeight: "80vh",
-                height: "auto",
-                aspectRatio: "1 / 1",
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                layout="fill"
-                objectFit="contain"
-                className="absolute inset-0"
-              />
-            </div>
+          <div
+            key={index}
+            className="relative w-full"
+            style={{
+              maxHeight: "80vh",
+              height: "auto",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              layout="responsive"
+              width={1920} // Assuming full-width images
+              height={1080} // Adjust for the proper aspect ratio
+              className="object-contain"
+            />
           </div>
         ))}
       </div>

@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm py-2">
+        <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
           <div className="text-right text-sm font-light mr-6 mb-2">
             © 2025 Thuy Nguyen. All rights reserved.
           </div>
