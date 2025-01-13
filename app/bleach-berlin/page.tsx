@@ -23,7 +23,7 @@ export default function BleachBerlin() {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to projects
         </Link>
-        <h1 className="text-3xl font-light mb-4">
+        <h1 className="text-3xl font-light">
           Visuelles Konzept für Bleach Berlin
         </h1>
         <p className="text-lg font-light mb-8">[Grafikdesign]</p>

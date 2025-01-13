@@ -48,7 +48,7 @@ const projects = [
   {
     href: "/das-dritte-bild",
     title: "Das Dritte Bild",
-    subtitle: "[FOTOGRAFIE]",
+    subtitle: "[POSTER DESIGN + FOTOGRAFIE]",
     image: CoverDasDritteBild,
     alt: "Das Dritte Bild Fotografie",
   },
@@ -139,7 +139,7 @@ export default function Home() {
                 className="flex flex-col"
               >
                 {/* Project Info (with optional bottom border to separate text & image) */}
-                <div className="p-4 space-y-2 border-b border-black">
+                <div className="p-4  border-b border-black">
                   <h2 className="text-sm font-light uppercase">
                     {project.title}
                   </h2>
@@ -149,7 +149,11 @@ export default function Home() {
                 </div>
 
                 {/* Square Image */}
-                <div className="relative aspect-square">
+                <div
+                  className={`relative aspect-square border-b border-black ${
+                    index < projects.length - 2 ? "mb-8" : ""
+                  }`}
+                >
                   <Image
                     src={project.image}
                     alt={project.alt}
