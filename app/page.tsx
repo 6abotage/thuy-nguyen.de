@@ -118,21 +118,27 @@ export default function Home() {
         {/* 
           On mobile (default): 1 column,
           on desktop (md+): 2 columns.
-          Each item is a square image plus some text.
+          Each item is a square image + text inside the same Link.
+          We use 'divide-y' for horizontal lines between items on mobile,
+          plus 'md:divide-x' for vertical lines in 2-col layout on desktop. 
         */}
         <div className="w-full py-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black w-full">
+          <div
+            className="
+              border border-black
+              grid grid-cols-1 md:grid-cols-2
+              divide-y md:divide-y-0 md:divide-x
+              divide-black
+              w-full
+            "
+          >
             {projects.map((project, index) => (
               <Link
                 key={project.href}
                 href={project.href}
-                className={`border-black bg-white ${
-                  /* optional horizontal border on desktop for the left col */
-                  index % 2 === 0 ? "md:border-r" : ""
-                } ${/* border on bottom for all but last row (optional) */ ""}
-                `}
+                className="flex flex-col"
               >
-                {/* Project Info */}
+                {/* Project Info (with optional bottom border to separate text & image) */}
                 <div className="p-4 space-y-2 border-b border-black">
                   <h2 className="text-sm font-light uppercase">
                     {project.title}
@@ -148,10 +154,10 @@ export default function Home() {
                     src={project.image}
                     alt={project.alt}
                     fill
-                    // Make sure images look good on mobile vs desktop:
+                    // Let the browser pick correct sizes
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
-                    priority={index < 2}
+                    priority={index < 2} // Preload first 2 images
                   />
                 </div>
               </Link>
