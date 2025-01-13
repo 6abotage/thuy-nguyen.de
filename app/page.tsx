@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import CoverEmotionaleErsteHilfe from "@/app/assets/cover/01_Cover_Emotionale_Erste_Hilfe.jpg";
-import CoverDieDreigroschenoper from "@/app/assets/cover/02_Cover_Die_Dreigroschenoper.jpg";
+import CoverDieDreigroschenoper from "@/app/assets/cover/02_Die_Dreigroschenoper.jpg";
 import CoverVinyl from "@/app/assets/cover/03_Cover_Vinyl.jpg";
-import CoverImSchattenDesStaunens from "@/app/assets/cover/04_Cover_Im_Schatten_Des_Staunens.jpg";
+import CoverImSchattenDesStaunens from "@/app/assets/cover/04_Im_Schatten_Des_Staunens.jpg";
 import CoverDasDritteBild from "@/app/assets/cover/05_Cover_Das_Dritte_Bild.jpg";
-import CoverFridaysForFutureZine from "@/app/assets/cover/06_Cover_Firdays_For_Future_Zine.jpg";
+import CoverFridaysForFutureZine from "@/app/assets/cover/06_Cover_Fridays_For_Future_Zine.jpg";
 import CoverZwischenDenZeilen from "@/app/assets/cover/07_Cover_Zwischen_Den_Zeilen.jpg";
 import CoverBleachBerlin from "@/app/assets/cover/08_Cover_Bleach_Berlin.jpg";
 
