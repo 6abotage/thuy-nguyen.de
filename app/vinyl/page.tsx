@@ -45,9 +45,11 @@ export default function MusikZumQuadrat() {
           begleitendes Booklet für ihr Album Night Killaz Vol. 1. Die visuelle
           Umsetzung wurde durch eigens angefertigte Fotografien ergänzt, um die
           ästhetische und klangliche Identität des Duos authentisch zu
-          unterstreichen. Das Projekt entstand nicht in Zusammenarbeit mit den
-          Künstler:innen, sondern dient ausschließlich privaten
-          Gestaltungszwecken.
+          unterstreichen.
+        </p>
+        <p className="text-lg font-light mb-10 italic">
+          Das Projekt entstand nicht in Zusammenarbeit mit den Künstler:innen,
+          sondern dient ausschließlich privaten Gestaltungszwecken.
         </p>
       </div>
 
