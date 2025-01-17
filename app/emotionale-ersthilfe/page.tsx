@@ -32,7 +32,7 @@ export default function GewaltfreieKommunikation() {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to projects
         </Link>
-        <h1 className="text-3xl font-light">Gewaltfreie Kommunikation</h1>
+        <h1 className="text-3xl font-light">Emotionale Erste Hilfe</h1>
         <p className="text-lg font-light mb-8">[Poster Design]</p>
         <p className="text-lg font-light mb-10">
           Die informative Plakatreihe „Emotionale Erste Hilfe&quot; thematisiert
