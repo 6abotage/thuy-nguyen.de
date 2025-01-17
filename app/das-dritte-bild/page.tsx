@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
+import React from "react";
+import ProjectLayout from "../../components/ProjectLayout";
 
 import Cover from "./assets/01_Cover.jpg";
 import Ausstellungsposter from "./assets/02_Ausstellungsposter.jpg";
@@ -30,65 +29,29 @@ const IMAGES = [
   { src: Gesicht, alt: "Gesicht" },
 ];
 
-export default function Resonanz() {
+const CONTENT = [
+  {
+    text: "Die Sprache ist ein Werkzeug, mit dem wir uns Menschen untereinander verständigen können. Doch manchmal ist uns dies durch gewisse Barrieren nicht möglich. Die Wechselwirkung von Sprache und Verständnis bringt oft Missverständnisse mit sich. Informationen, Emotionen und Gefühle finden ihr Ziel aber auch über andere Arten der Kommunikation. Diese Arbeit beschäftigt sich mit der Wechselwirkung von Sprache mit Bildern. Wie reagieren sie zueinander oder miteinander?",
+  },
+  {
+    text: "Auch wenn wir das gleiche Bild vor uns sehen, kann es uns etwas anderes sagen und auch eine andere Bedeutung haben. Was siehst du? Was fühlst du, wenn du hinschaust?",
+    italic: true,
+  },
+  {
+    text: "Die Bilder laden nicht nur zu einem Austausch untereinander ein, sondern auch dem Austausch unter den Betrachter:innen und der Person, die diese eingefangen hat. Eine Sprache, mit der wir uns austauschen können, ohne richtig oder falsch zu liegen.",
+  },
+];
+
+const Resonanz: React.FC = () => {
   return (
-    <div className="container mx-auto min-h-full  py-8">
-      <div className="px-4">
-        <Link
-          href="/"
-          className="inline-flex items-center mb-6 text-sm font-light hover:underline"
-        >
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to projects
-        </Link>
-        <h1 className="text-3xl font-light">Resonanz</h1>
-        <p className="text-lg font-light mb-8">[Poster Design + Fotografie]</p>
-        <p className="text-lg font-light mb-10">
-          Die Sprache ist ein Werkzeug, mit dem wir uns Menschen untereinander
-          verständigen können. Doch manchmal ist uns dies durch gewisse
-          Barrieren nicht möglich. Die Wechselwirkung von Sprache und
-          Verständnis bringt oft Missverständnisse mit sich. Informationen,
-          Emotionen und Gefühle finden ihr Ziel aber auch über andere Arten der
-          Kommunikation. Diese Arbeit beschäftigt sich mit der Wechselwirkung
-          von Sprache mit Bildern. Wie reagieren sie zueinander oder
-          miteinander?
-        </p>
-        <p className="text-lg font-light italic mb-10">
-          Auch wenn wir das gleiche Bild vor uns sehen, kann es uns etwas
-          anderes sagen und auch eine andere Bedeutung haben. Was siehst du? Was
-          fühlst du, wenn du hinschaust?
-        </p>
-        <p className="text-lg font-light mb-10">
-          Die Bilder laden nicht nur zu einem Austausch untereinander ein,
-          sondern auch dem Austausch unter den Betrachter:innen und der Person,
-          die diese eingefangen hat. Eine Sprache, mit der wir uns austauschen
-          können, ohne richtig oder falsch zu liegen.
-        </p>
-      </div>
-      {/* Images displayed vertically; each image fits mobile width, 
-              centers on desktop, with max height of 80vh */}
-      <div className="grid grid-cols-1 gap-8 px-4">
-        {IMAGES.map((image, index) => (
-          <div
-            key={index}
-            className="relative mx-auto w-full md:w-auto"
-            /* optional: limit the maximum width on large screens if you want
-                   style={{ maxWidth: '1200px' }} */
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              // Provide a large width/height so Next calculates aspect ratio
-              width={1920}
-              height={1920}
-              // Let Tailwind handle responsiveness
-              className="w-full md:w-auto max-h-[80vh] object-contain mx-auto"
-              // sizes helps the browser determine appropriate image size
-              sizes="(max-width: 768px) 100vw, 80vw"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    <ProjectLayout
+      title="Resonanz"
+      description="[Poster Design + Fotografie]"
+      year="2023"
+      content={CONTENT}
+      images={IMAGES}
+    />
   );
-}
+};
+
+export default Resonanz;
