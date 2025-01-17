@@ -11,6 +11,11 @@ import Victimblaming from "./assets/02_Victimblaming.jpg";
 import ToxischePositivitaet from "./assets/03_Toxischepositivitaet.jpg";
 import Gaslighting from "./assets/04_Gaslighting.jpg";
 
+// Define the ContentParagraph type
+type ContentParagraph = {
+  text: string;
+};
+
 // Define the images array
 const IMAGES = [
   { src: Cover, alt: "Cover - Zwischen den Zeilen" },
