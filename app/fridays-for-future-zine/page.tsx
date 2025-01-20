@@ -40,8 +40,8 @@ const ProjektFFF: React.FC = () => {
   return (
     <ProjectLayout
       title="Fridays For Future Zine"
-      description="[Hommage an David Carson]"
-      year="2024" // Add the year here
+      description="(Hommage an David Carson)"
+      year="2023" // Add the year here
       content={CONTENT}
       images={IMAGES}
     />

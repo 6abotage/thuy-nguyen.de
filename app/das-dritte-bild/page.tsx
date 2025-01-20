@@ -45,9 +45,9 @@ const CONTENT = [
 const Resonanz: React.FC = () => {
   return (
     <ProjectLayout
-      title="Resonanz"
+      title="Das Dritte Bild"
       description="[Poster Design + Fotografie]"
-      year="2023"
+      year="2024"
       content={CONTENT}
       images={IMAGES}
     />

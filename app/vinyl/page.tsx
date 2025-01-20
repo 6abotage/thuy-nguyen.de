@@ -43,7 +43,7 @@ const MusikZumQuadrat: React.FC = () => {
     <ProjectLayout
       title="Musik zum Quadrat"
       description="[Hommage an Snow Strippers]"
-      year="2025" // Add the year here
+      year="2024" // Add the year here
       content={CONTENT}
       images={IMAGES}
     />

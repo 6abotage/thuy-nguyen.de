@@ -42,7 +42,7 @@ const ZwischenDenZeilen: React.FC = () => {
     <ProjectLayout
       title="Zwischen den Zeilen"
       description="[Poster Design]"
-      year="2024" // Add the year here
+      year="2022" // Add the year here
       content={CONTENT}
       images={IMAGES}
     />

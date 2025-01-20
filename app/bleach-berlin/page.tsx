@@ -25,7 +25,7 @@ const BleachBerlin: React.FC = () => {
     <ProjectLayout
       title="Visuelles Konzept für Bleach Berlin"
       description="[Grafikdesign]"
-      year="2024" // Add the year here
+      year="2023" // Add the year here
       content={CONTENT}
       images={IMAGES}
     />
