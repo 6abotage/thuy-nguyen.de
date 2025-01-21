@@ -30,17 +30,13 @@ const CONTENT = [
   {
     text: "Das faltbare „Fridays for Future” Zine im Stil von David Carson bietet einen informativen Einblick in die Grundlagen und Ziele der Bewegung und dient als idealer Ausgangspunkt für alle, die sich dem Kampf für eine bessere Zukunft anschließen möchten. Mit dem faltbaren Format lässt sich das Zine leicht mitnehmen und teilen. Durch die unkonventionelle Anordnung der Typografien und dem außergewöhnlichen Design zieht das Zine Aufmerksamkeit auf sich und regt durch die Informationszufuhr zum Nachdenken an.",
   },
-  {
-    text: "Das Projekt entstand nicht in Zusammenarbeit mit den Künstler:innen, sondern dient ausschließlich privaten Gestaltungszwecken.",
-    italic: true,
-  },
 ];
 
 const ProjektFFF: React.FC = () => {
   return (
     <ProjectLayout
-      title="Fridays For Future Zine"
-      description="(Hommage an David Carson)"
+      title="Fridays For Future Zine (Hommage an David Carson)"
+      description="[Zine Design]"
       year="2023" // Add the year here
       content={CONTENT}
       images={IMAGES}
