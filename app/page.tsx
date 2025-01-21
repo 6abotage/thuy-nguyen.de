@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Instagram, Linkedin } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import CoverEmotionaleErsteHilfe from "@/app/assets/cover/01_Cover_Emotionale_Erste_Hilfe.jpg";
 import CoverDieDreigroschenoper from "@/app/assets/cover/02_Die_Dreigroschenoper.jpg";
@@ -90,24 +90,6 @@ export default function Home() {
           <nav className="hidden gap-6 lg:flex">
             <Link href="/about" className="text-2xl font-light hover:underline">
               About me
-            </Link>
-            <Link
-              href="https://www.instagram.com/thuy.ngy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center hover:text-gray-600"
-            >
-              <Instagram className="h-5 w-5" />
-              <span className="sr-only">Instagram</span>
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/thu-thuy-nguyen-3345ab20a/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center hover:text-gray-600"
-            >
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
             </Link>
           </nav>
           <Sheet>

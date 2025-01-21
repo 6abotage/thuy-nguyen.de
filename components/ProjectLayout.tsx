@@ -43,7 +43,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
   }, []);
 
   return (
-    <div className="container mx-auto min-h-full py-8">
+    <div className="max-w-4xl mx-auto min-h-full py-8">
       <div className="px-4">
         <Link
           href="/"

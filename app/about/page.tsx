@@ -16,6 +16,22 @@ export default function About() {
           >
             Thuy Nguyen
           </Link>
+          <Link
+            href="https://www.instagram.com/itsthuynguyen"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center hover:text-gray-600"
+          >
+            <span>Instagram</span>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/thu-thuy-nguyen-3345ab20a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center hover:text-gray-600"
+          >
+            <span>LinkedIn</span>
+          </Link>
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" className="-mr-2">
