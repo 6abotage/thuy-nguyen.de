@@ -1,15 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import thuy from "./thuy.jpeg";
 
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="flex flex-col min-h-screen space-y-4">
+      {/* HEADER (Old Navbar) */}
       <header className="pt-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container flex h-14 items-center gap-12">
+        <div className="container flex h-14 items-center gap-4 lg:gap-12">
           <Link
             href="/"
             className="pl-4 text-3xl font-light hover:underline underline"
@@ -32,81 +35,49 @@ export default function About() {
           >
             <span>LinkedIn</span>
           </Link>
-          <Sheet>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="-mr-2">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="grid gap-4">
-                <Link href="#" className="text-lg hover:underline">
-                  Hire me
-                </Link>
-                <Link href="#" className="text-lg hover:underline">
-                  About me
-                </Link>
-              </nav>
-            </SheetContent>
-          </Sheet>
         </div>
       </header>
-      <main className="flex-grow container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-light mb-8 text-center">
+
+      {/* MAIN CONTENT */}
+      <main className="flex-grow container mx-auto px-4  lg:py-36 max-w-4xl">
+        {/* Heading + Image in One Div */}
+        <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-start gap-14 mb-4 lg:mb-24">
+          {/* About Me Headline */}
+          <h1 className="text-3xl sm:text-4xl font-light lg:self-end self-auto">
             About Me
           </h1>
-          <div className="space-y-12">
-            <section className="space-y-4">
-              <h2 className="text-2xl font-light mb-4">
-                Artist Statement (German)
-              </h2>
-              <p className="text-lg font-light leading-relaxed">
-                Meine Arbeit ist ein kontinuierliches Experiment – eine
-                spielerische Herangehensweise in den Feldern Grafikdesign und
-                Fotografie, das die Grenzen des Möglichen erkundet. Ich arbeite
-                in Räumen, in denen Ordnung auf Chaos trifft, in denen nichts so
-                ist, wie es scheint.
-              </p>
-              <p className="text-lg font-light leading-relaxed">
-                Mit meiner Fotografie fange ich Momente ein, die sowohl
-                inszeniert als auch tief real sind – eine Balance zwischen
-                Kontrolle und Intuition. Im Design setze ich auf das Unerwartete
-                und verdrehe Typografie und visuelle Formen zu neuen Gestalten,
-                damit Ideen umso kraftvoller wirken.
-              </p>
-              <p className="text-lg font-light leading-relaxed">
-                Mich zieht es zu den Rändern der Gesellschaft, zu dem, was
-                unausgesprochen oder ungesehen bleibt. Es geht darum, das
-                Konventionelle zu hinterfragen und das Unkonventionelle zu
-                feiern.
-              </p>
-            </section>
-            <section className="space-y-4">
-              <h2 className="text-2xl font-light mb-4">
-                Artist Statement (English)
-              </h2>
-              <p className="text-lg font-light leading-relaxed">
-                My work is a continuous experiment – a playful approach in the
-                fields of graphic design and photography, exploring the limits
-                of what is possible. I work in spaces where order meets chaos,
-                where nothing is as it seems.
-              </p>
-              <p className="text-lg font-light leading-relaxed">
-                Through my photography, I capture moments that are both staged
-                and deeply real – a balance between control and intuition. In
-                design, I lean into the unexpected, twisting typography and
-                visual forms into new shapes, making ideas resonate with greater
-                power.
-              </p>
-              <p className="text-lg font-light leading-relaxed">
-                I am drawn to the edges of society, to what remains unspoken or
-                unseen. It’s about questioning the conventional and celebrating
-                the unconventional.
-              </p>
-            </section>
+          {/* Image */}
+          <div className="relative w-44 h-44 lg:w-80 lg:h-80 sm:w-48 sm:h-48 self-end md:self-auto">
+            <Image
+              src={thuy}
+              alt="Thuy Nguyen"
+              fill
+              className="object-cover rounded-full shadow-xl ring-2 ring-white dark:ring-gray-900"
+            />
           </div>
+        </div>
+
+        {/* Paragraphs below */}
+        <div className="space-y-2 lg:space-y-12 text-lg">
+          <p className="lg:text-2xl  font-light leading-relaxed text-justify">
+            Hey! Mein Name ist Thuy Nguyen, bin 25 Jahre alt und wohne zurzeit
+            in Köln. Ich bin angehende Grafikdesignerin und meine Arbeit ist ein
+            kontinuierliches Experiment – eine spielerische Herangehensweise in
+            den Feldern Grafikdesign und Fotografie, das die Grenzen des
+            Möglichen erkundet. Ich arbeite in Räumen, in denen Ordnung auf
+            Chaos triﬀt, in denen nichts so ist, wie es scheint.
+          </p>
+          <p className="lg:text-2xl   font-light leading-relaxed text-justify">
+            Mit meiner Fotografie fange ich Momente ein, die sowohl inszeniert
+            als auch tief real sind. Im Design setze ich auf das Unerwartete und
+            verdrehe Typografie und visuelle Formen zu neuen Gestalten, damit
+            Ideen umso kraftvoller wirken.
+          </p>
+          <p className="lg:text-2xl   font-light leading-relaxed text-justify">
+            Mich zieht es zu den Rändern der Gesellschaft, zu dem, was
+            unausgesprochen oder ungesehen bleibt. Es geht darum, das
+            Konventionelle zu hinterfragen und das Unkonventionelle zu feiern.
+          </p>
         </div>
       </main>
     </div>

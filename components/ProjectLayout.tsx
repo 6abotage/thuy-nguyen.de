@@ -55,6 +55,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
         <h1 className="text-3xl font-light">{title}</h1>
         <p className="text-lg font-light mb-2">{year}</p>
         <p className="text-lg font-light mb-8">{description}</p>
+
         {content.map((paragraph, index) => (
           <p
             key={index}
@@ -86,30 +87,31 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
         ))}
       </div>
 
-      {/* Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="relative max-w-4xl w-full max-h-full"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+            className="relative w-full h-full"
+            onClick={(e) => e.stopPropagation()}
           >
+            {/* Ensure the button is above the image */}
             <button
-              className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 focus:outline-none"
+              className="absolute top-4 right-4 z-10 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 focus:outline-none"
               onClick={() => setSelectedImage(null)}
               aria-label="Close"
             >
               <X className="h-6 w-6" />
             </button>
+
+            {/* Disable pointer events so clicks pass through to the button */}
             <Image
               src={selectedImage.src}
               alt={selectedImage.alt}
-              width={1920}
-              height={1920}
-              className="w-full h-auto max-h-screen object-contain"
-              sizes="(max-width: 768px) 100vw, 80vw"
+              fill
+              className="object-contain pointer-events-none"
+              sizes="100vw"
             />
           </div>
         </div>
