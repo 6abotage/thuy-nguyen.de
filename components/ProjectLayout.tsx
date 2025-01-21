@@ -72,24 +72,28 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
     selectedIndex !== null ? (selectedIndex + 1) % images.length : null;
 
   return (
-    <div className="max-w-4xl mx-auto min-h-full py-8">
+    <div className="max-w-4xl mx-auto min-h-full sm:py-8">
       {/* --- PAGE CONTENT --- */}
       <div className="px-4">
         <Link
           href="/"
-          className="inline-flex items-center mb-6 text-sm font-light hover:underline"
+          className="inline-flex items-center mb-6 text-xs sm:text-sm font-light hover:underline"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to projects
         </Link>
-        <h1 className="text-3xl font-light">{title}</h1>
-        <p className="text-lg font-light mb-2">{year}</p>
-        <p className="text-lg font-light mb-8">{description}</p>
 
+        {/* Title and Meta Info */}
+        <h1 className="text-xl sm:text-3xl font-light mb-2">{title}</h1>
+        <p className="text-sm sm:text-base font-light mb-6">
+          {description} - {year}
+        </p>
+
+        {/* Paragraphs */}
         {content.map((paragraph, index) => (
           <p
             key={index}
-            className={`text-lg font-light mb-10 ${
+            className={`text-sm sm:text-base font-light mb-6 ${
               paragraph.italic ? "italic" : ""
             }`}
           >
@@ -99,7 +103,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
       </div>
 
       {/* --- IMAGE GRID --- */}
-      <div className="grid grid-cols-1 gap-8 px-4">
+      <div className="grid grid-cols-1 gap-6 px-4 sm:gap-8">
         {images.map((image, index) => (
           <div
             key={index}
@@ -137,10 +141,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
               <X className="h-6 w-6" />
             </button>
 
-            {/* PREV Button 
-                Mobile: bottom-left 
-                Desktop: center-left (vertical)
-            */}
+            {/* PREV Button (mobile at bottom-left, desktop center-left) */}
             {images.length > 1 && (
               <button
                 className={`
@@ -157,10 +158,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
               </button>
             )}
 
-            {/* NEXT Button 
-                Mobile: bottom-right 
-                Desktop: center-right (vertical)
-            */}
+            {/* NEXT Button (mobile at bottom-right, desktop center-right) */}
             {images.length > 1 && (
               <button
                 className={`

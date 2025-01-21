@@ -33,7 +33,7 @@ const CONTENT = [
     text: "In diesem Projekt setzte ich mich mit dem Musikduo Snow Strippers auseinander, das in seiner Musik Elemente aus EDM, Electropop, New Rave, Witch House und Techno vereint. Ziel war die Entwicklung eines konsistenten Gestaltungskonzepts für eine Schallplatte und ein begleitendes Booklet. Als Hommage habe ich das Album 'Knight Killaz Vol. 1' genannt. Die visuelle Umsetzung wurde durch eigens angefertigte Fotografien ergänzt, um die ästhetische und klangliche Identität des Duos authentisch zu unterstreichen",
   },
   {
-    text: "Das Projekt entstand nicht in Zusammenarbeit mit den Künstler:innen, sondern dient ausschließlich privaten Gestaltungszwecken",
+    text: "Das Projekt entstand nicht in Zusammenarbeit mit den Künstler:innen, sondern dient ausschließlich privaten Gestaltungszwecken. ",
     italic: true,
   },
   { text: "Model: Lara Vormwald-Kaeppele" },
