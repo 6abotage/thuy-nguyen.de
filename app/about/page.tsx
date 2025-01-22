@@ -12,11 +12,42 @@ export default function About() {
         <div className="flex flex-col items-center gap-6">
           {/* Image */}
 
+          <div className="relative w-full max-w-sm mx-auto lg:mb-12">
+            <Image
+              src={thuy}
+              alt="Thuy Nguyen"
+              width={600}
+              height={600}
+              className="object-cover shadow-xl" // keeps a box shadow
+            />
+          </div>
           {/* Heading */}
-          <h1 className="text-2xl sm:text-3xl font-light">About Me</h1>
+        </div>
+
+        {/* Paragraphs Section */}
+        <div className="mt-8 space-y-6 text-sm md:text-base leading-relaxed text-justify">
+          <p>Hey! Mein Name ist Thuy Nguyen</p>
+          <p>
+            Ich bin angehende Grafikdesignerin und wohne zurzeit in Köln. Meine
+            Arbeit ist ein kontinuierliches Experiment – eine spielerische
+            Herangehensweise in den Feldern Grafikdesign und Fotografie, das die
+            Grenzen des Möglichen erkundet. Ich arbeite in Räumen, in denen
+            Ordnung auf Chaos trifft, in denen nichts so ist, wie es scheint.
+          </p>
+          <p>
+            Mit meiner Fotografie fange ich Momente ein, die sowohl inszeniert
+            als auch tief real sind. Im Design setze ich auf das Unerwartete und
+            verdrehe Typografie und visuelle Formen zu neuen Gestalten, damit
+            Ideen umso kraftvoller wirken.
+          </p>
+          <p>
+            Mich zieht es zu den Rändern der Gesellschaft, zu dem, was
+            unausgesprochen oder ungesehen bleibt. Es geht darum, das
+            Konventionelle zu hinterfragen und das Unkonventionelle zu feiern.
+          </p>
 
           {/* Social Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-end lg:pt-12">
             <Link
               href="https://www.instagram.com/itsthuynguyen"
               target="_blank"
@@ -33,38 +64,6 @@ export default function About() {
             >
               LinkedIn
             </Link>
-          </div>
-        </div>
-
-        {/* Paragraphs Section */}
-        <div className="mt-8 space-y-6 text-sm md:text-base leading-relaxed text-justify">
-          <p>
-            Hey! Mein Name ist Thuy Nguyen, bin 25 Jahre alt und wohne zurzeit
-            in Köln. Ich bin angehende Grafikdesignerin und meine Arbeit ist ein
-            kontinuierliches Experiment – eine spielerische Herangehensweise in
-            den Feldern Grafikdesign und Fotografie, das die Grenzen des
-            Möglichen erkundet. Ich arbeite in Räumen, in denen Ordnung auf
-            Chaos trifft, in denen nichts so ist, wie es scheint.
-          </p>
-          <p>
-            Mit meiner Fotografie fange ich Momente ein, die sowohl inszeniert
-            als auch tief real sind. Im Design setze ich auf das Unerwartete und
-            verdrehe Typografie und visuelle Formen zu neuen Gestalten, damit
-            Ideen umso kraftvoller wirken.
-          </p>
-          <p>
-            Mich zieht es zu den Rändern der Gesellschaft, zu dem, was
-            unausgesprochen oder ungesehen bleibt. Es geht darum, das
-            Konventionelle zu hinterfragen und das Unkonventionelle zu feiern.
-          </p>
-          <div className="relative w-full max-w-sm ml-auto">
-            <Image
-              src={thuy}
-              alt="Thuy Nguyen"
-              width={600}
-              height={600}
-              className="object-cover shadow-xl" // keeps a box shadow
-            />
           </div>
         </div>
       </main>

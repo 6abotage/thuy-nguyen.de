@@ -36,6 +36,10 @@ const CONTENT = [
   {
     text: "Durch Bilder, die gleichzeitig irritieren und faszinieren, möchte ich die Betrachter:innen dazu einladen, sich mit ihren eigenen Gefühlen auseinanderzusetzen und Staunen als eine ungewohnte, aber bereichernde Perspektive neu zu entdecken.",
   },
+  {
+    text: "Model: Ben Joscha Kühlkamp und  Enya Xuan Wisniewsky",
+    italic: true,
+  },
 ];
 
 const ImSchattenDesStaunens: React.FC = () => {
