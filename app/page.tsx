@@ -1,11 +1,8 @@
-// File: app/page.tsx (Home Page)
-
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
-
-// No need to import Button, Sheet, etc. here anymore
+import { useCallback } from "react";
 
 import CoverEmotionaleErsteHilfe from "@/app/assets/cover/01_Cover_Emotionale_Erste_Hilfe.jpg";
 import CoverDieDreigroschenoper from "@/app/assets/cover/02_Die_Dreigroschenoper.jpg";
@@ -15,6 +12,7 @@ import CoverDasDritteBild from "@/app/assets/cover/05_Cover_Das_Dritte_Bild.jpg"
 import CoverFridaysForFutureZine from "@/app/assets/cover/06_Cover_Fridays_For_Future_Zine.jpg";
 import CoverZwischenDenZeilen from "@/app/assets/cover/07_Cover_Zwischen_Den_Zeilen.jpg";
 import CoverBleachBerlin from "@/app/assets/cover/08_Cover_Bleach_Berlin.jpg";
+import "./animations.css";
 
 const projects = [
   {
@@ -44,6 +42,7 @@ const projects = [
     subtitle: "[FOTOGRAFIE]",
     image: CoverImSchattenDesStaunens,
     alt: "Im Schatten des Staunens Fotografie",
+    isUniversityProject: true,
   },
   {
     href: "/das-dritte-bild",
@@ -51,6 +50,7 @@ const projects = [
     subtitle: "[POSTER DESIGN + FOTOGRAFIE]",
     image: CoverDasDritteBild,
     alt: "Das Dritte Bild Fotografie",
+    isUniversityProject: true,
   },
   {
     href: "/fridays-for-future-zine",
@@ -76,6 +76,13 @@ const projects = [
 ];
 
 export default function Home() {
+  const isHighlightPeriod = useCallback(() => {
+    const now = new Date();
+    const startDate = new Date("2023-06-01"); // Replace with your start date
+    const endDate = new Date("2023-07-31"); // Replace with your end date
+    return now >= startDate && now <= endDate;
+  }, []);
+
   return (
     <main className="flex-grow">
       {/* MAIN CONTENT */}
@@ -93,32 +100,61 @@ export default function Home() {
             <Link
               key={project.href}
               href={project.href}
-              className="flex flex-col"
+              className={`
+                flex flex-col relative overflow-hidden
+                ${
+                  project.isUniversityProject && isHighlightPeriod()
+                    ? "university-project"
+                    : ""
+                }
+              `}
             >
               {/* Info */}
-              <div className="p-4 border-b border-black">
-                <h2 className="text-sm font-light uppercase">
+              <div className="p-4 border-b border-black relative z-10">
+                <h2
+                  className={`
+                  text-sm uppercase
+                  ${
+                    project.isUniversityProject
+                      ? "font-medium shake"
+                      : "font-light"
+                  }
+                `}
+                >
                   {project.title}
                 </h2>
-                <p className="text-sm font-light text-muted-foreground">
+                <p
+                  className={`
+                  text-sm font-light
+                  ${
+                    project.isUniversityProject
+                      ? "text-blue-600"
+                      : "text-muted-foreground"
+                  }
+                `}
+                >
                   {project.subtitle}
                 </p>
               </div>
 
               {/* Square Image */}
               <div
-                className={`relative aspect-square border-b border-black ${
-                  index < projects.length - 2 ? "mb-8" : ""
-                }`}
+                className={`
+                  relative aspect-square border-b border-black
+                  ${index < projects.length - 2 ? "mb-8" : ""}
+                `}
               >
                 <Image
-                  src={project.image}
+                  src={project.image || "/placeholder.svg"}
                   alt={project.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                   priority={index < 2} // Preload first 2 images
                 />
+                {project.isUniversityProject && isHighlightPeriod() && (
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent" />
+                )}
               </div>
             </Link>
           ))}
